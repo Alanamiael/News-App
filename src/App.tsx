@@ -1,9 +1,10 @@
-import "./styles/App.scss";
+import Loader from './components/Loader';
+import './styles/App.scss';
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Loader />
     </>
   );
 }
