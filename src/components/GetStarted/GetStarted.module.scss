@@ -1,0 +1,20 @@
+@import '@styles/mixins';
+
+.imgContainer {
+  img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100px;
+  }
+}
+.container {
+  @include flex($justify: flex-end, $direction: column);
+  text-align: center;
+  margin-top: 140px;
+
+  .margins {
+    text-align: center;
+    margin: 250px 0 44px 0;
+  }
+}

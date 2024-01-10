@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import star from '@assets/loader-star/Subtract.svg';
-import cl from './Loader.module.scss';
+import cl from './SplashScreen.module.scss';
 
-const Loader: FC = () => {
+const SplashScreen: FC = () => {
   return (
     <div className={cl.container}>
       <img src={star} alt="star" />
@@ -17,4 +17,4 @@ const Loader: FC = () => {
     </div>
   );
 };
-export default Loader;
+export default SplashScreen;

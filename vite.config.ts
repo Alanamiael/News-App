@@ -22,6 +22,10 @@ export default defineConfig({
         find: '@styles',
         replacement: path.resolve(__dirname, './src/styles'),
       },
+      {
+        find: '@shared',
+        replacement: path.resolve(__dirname, './src/shared'),
+      },
     ],
   },
 });

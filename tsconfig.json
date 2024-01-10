@@ -24,7 +24,8 @@
       "@components/*": ["components/*"],
       "@ts/*": ["ts/*"],
       "@styles/*": ["styles/*"],
-      "@helpers/*": ["helpers/*"]
+      "@helpers/*": ["helpers/*"],
+      "@shared/*": ["shared/*"]
     }
   },
   "include": [".eslintrc.cjs", "src"],
