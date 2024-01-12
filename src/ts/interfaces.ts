@@ -30,3 +30,7 @@ export interface SubTitleProps {
 export interface RegularTextProps {
   widthNormal?: boolean;
 }
+
+export interface FirstToKnowProps {
+  onButtonClick: () => void;
+}

@@ -14,7 +14,7 @@ import {
 } from '@enums/enums';
 import cl from './SignUp.module.scss';
 
-const GetStarted: FC = () => {
+const SignUp: FC = () => {
   return (
     <div className={cl.container}>
       <MainTitle>{Titles.WelcometoStoryWire}</MainTitle>
@@ -45,4 +45,4 @@ const GetStarted: FC = () => {
     </div>
   );
 };
-export default GetStarted;
+export default SignUp;

@@ -13,7 +13,6 @@ const GetStarted: FC = () => {
         <RegularText className={cl.margins}>
           {SubTitles.FirstToKnow}
         </RegularText>
-
         <CustomButton text={ButtonTitles.GetStarted} />
       </div>
     </div>

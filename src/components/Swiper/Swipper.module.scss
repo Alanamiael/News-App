@@ -1,0 +1,13 @@
+@import '@styles/mixins';
+.swiperSlide {
+  @include flex($justify: center, $align: center);
+  width: auto;
+  text-align: center;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

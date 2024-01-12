@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-import '@styles/App.scss';
 import SplashScreen from '@components/SplashScreen';
-
-import SignUp from '@components/SignUp';
-import OnBoard from '@components/OnBoard';
+import Onboarding from '@components/Onboarding';
+import '@styles/App.scss';
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -24,7 +22,7 @@ const App = () => {
         </div>
       ) : (
         <div className="wrapper">
-          <OnBoard />
+          <Onboarding />
         </div>
       )}
     </div>

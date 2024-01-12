@@ -2,19 +2,17 @@
 
 .imgContainer {
   img {
+    @include position($top: 150px);
     width: 100%;
-    position: absolute;
-    left: 0;
-    top: 100px;
   }
 }
 .container {
   @include flex($justify: flex-end, $direction: column);
   text-align: center;
-  margin-top: 140px;
+  margin-top: 200px;
 
   .margins {
     text-align: center;
-    margin: 250px 0 44px 0;
+    margin: 320px 0 80px 0;
   }
 }
