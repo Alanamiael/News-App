@@ -1,7 +1,7 @@
-import { AntSwitch } from './styled';
-//переймнувати
-export default function CustomizedSwitch() {
+import { CustomSwitch } from './styled';
+
+export const CustomizedSwitch = () => {
   return (
-    <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+    <CustomSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
   );
-}
+};

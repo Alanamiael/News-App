@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import CustomizedButtons from '@shared/Button';
-import cl from './GetStarted.module.scss';
-import handshake from '@assets/handshake.svg';
+import CustomButton from '@shared/Button';
 import { RegularText } from '@shared/Typography';
+import { ButtonTitles, SubTitles } from '@enums/enums';
+import handshake from '@assets/handshake.svg';
+import cl from './GetStarted.module.scss';
 
 const GetStarted: FC = () => {
   return (
@@ -10,10 +11,10 @@ const GetStarted: FC = () => {
       <img src={handshake} alt="img" />
       <div className={cl.container}>
         <RegularText className={cl.margins}>
-          All news in one place, be the first to know last news
+          {SubTitles.FirstToKnow}
         </RegularText>
 
-        <CustomizedButtons text="Get Started" />
+        <CustomButton text={ButtonTitles.GetStarted} />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+import { RegularTextProps, SubTitleProps } from '@ts/interfaces';
 
 export const MainTitle = styled('h3')(() => ({
   fontSize: '24px',
@@ -8,27 +8,22 @@ export const MainTitle = styled('h3')(() => ({
   color: 'var(--black-primary-color)',
 }));
 
-export const WhiteSubTitle = styled(Typography)(() => ({
+export const SubTitle = styled('h4')<SubTitleProps>(({ color }) => ({
   fontSize: '20px',
   fontWeight: 700,
   lineHeight: '28px',
-  color: 'var(--white-primary-color)',
+  color: color || 'var(--black-primary-color)',
 }));
-export const SubTitle = styled('h4')(() => ({
-  fontSize: '20px',
-  fontWeight: 700,
-  lineHeight: '28px',
-  color: 'var(--black-primary-color)',
-}));
-export const RegularText = styled('p')(() => ({
+export const RegularText = styled('p')<RegularTextProps>(({ widthNormal }) => ({
   fontSize: '16px',
-  fontWeight: 400,
+  fontWeight: widthNormal ? 400 : 600,
   lineHeight: '24px',
   color: 'var(--grey-primary-color)',
 }));
-export const RegularBold = styled('p')(() => ({
+export const RegularBold = styled('p')<SubTitleProps>(({ color }) => ({
+  display: 'inline',
   fontSize: '16px',
   fontWeight: 500,
   lineHeight: '32px',
-  color: 'var(--black-lighter-color)',
+  color: color || 'var(--black-lighter-color)',
 }));

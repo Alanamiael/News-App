@@ -1,21 +1,26 @@
 import { styled } from '@mui/material/styles';
 import { Box, keyframes } from '@mui/material';
+import { LanguageCheckboxProps } from '@ts/interfaces';
 
-export const CustomCheckboxWrapper = styled(Box)(({ checked }) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  backgroundColor: checked
-    ? 'var(--purple-primary-color)'
-    : 'var(--gray-lighter-color)',
-  borderRadius: '12px',
-  padding: '16px 24px',
-  marginBottom: '16px',
-  height: '56px',
-  boxSizing: 'border-box',
-  '& p': {
-    color: checked ? 'var(--white-primary-color)' : 'var(--gray-darker-color)',
-  },
-}));
+export const LanguageCheckbox = styled(Box)<LanguageCheckboxProps>(
+  ({ checked }) => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    backgroundColor: checked
+      ? 'var(--purple-primary-color)'
+      : 'var(--gray-lighter-color)',
+    borderRadius: '12px',
+    padding: '16px 24px',
+    marginBottom: '16px',
+    height: '56px',
+    boxSizing: 'border-box',
+    '& p': {
+      color: checked
+        ? 'var(--white-primary-color)'
+        : 'var(--gray-darker-color)',
+    },
+  })
+);
 
 const draw = keyframes`
     to {
@@ -28,7 +33,7 @@ export const CheckMark = styled('svg')({
   width: '24px',
   '& path': {
     fill: 'none',
-    stroke: '#FFF',
+    stroke: 'var(--white-primary-color)',
     strokeWidth: '2',
     strokeDasharray: '23',
     strokeDashoffset: '23',

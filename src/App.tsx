@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import '@styles/App.scss';
 import SplashScreen from '@components/SplashScreen';
-import GetStarted from '@components/GetStarted';
-import OnBoard from '@components/OnBoard';
-import SignIn from '@components/SignIn';
 
-function App() {
+import SignUp from '@components/SignUp';
+import OnBoard from '@components/OnBoard';
+
+const App = () => {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
@@ -24,11 +24,11 @@ function App() {
         </div>
       ) : (
         <div className="wrapper">
-          <GetStarted />
+          <OnBoard />
         </div>
       )}
     </div>
   );
-}
+};
 
 export default App;

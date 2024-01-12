@@ -1,8 +1,7 @@
-import styled from 'styled-components';
 import { Swiper } from 'swiper/react';
+import styled from 'styled-components';
 
 export const CustomSwiper = styled(Swiper)({
-  position: 'absolute',
   marginBottom: '34px',
   padding: '0 0 40px 0 !important',
   width: '100%',
@@ -15,10 +14,4 @@ export const CustomSwiper = styled(Swiper)({
     borderRadius: '12px',
     backgroundColor: 'var(--purple-primary-color)',
   },
-  // '& .swiper-slide': {
-  //   transition: '0.4s',
-  //   '&:not(.swiper-slide-active)': {
-  //     transform: 'scale(0.9)',
-  //   },
-  // },
 });

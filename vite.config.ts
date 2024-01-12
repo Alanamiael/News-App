@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -25,6 +24,10 @@ export default defineConfig({
       {
         find: '@shared',
         replacement: path.resolve(__dirname, './src/shared'),
+      },
+      {
+        find: '@enums',
+        replacement: path.resolve(__dirname, './src/enums'),
       },
     ],
   },

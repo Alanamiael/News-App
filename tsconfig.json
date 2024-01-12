@@ -25,7 +25,8 @@
       "@ts/*": ["ts/*"],
       "@styles/*": ["styles/*"],
       "@helpers/*": ["helpers/*"],
-      "@shared/*": ["shared/*"]
+      "@shared/*": ["shared/*"],
+      "@enums/*": ["enums/*"]
     }
   },
   "include": [".eslintrc.cjs", "src"],

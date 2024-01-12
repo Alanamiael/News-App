@@ -1,17 +1,14 @@
 @import '@styles/mixins';
+
 .container {
   @include flex($direction: column);
   text-align: center;
   margin-top: 90px;
 
   .swiperSlide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex($justify: center, $align: center);
     width: auto;
     text-align: center;
-
-    /* Center slide text vertically */
 
     & img {
       display: block;

@@ -1,7 +1,7 @@
 import Switch from '@mui/material/Switch/Switch';
 import { styled } from '@mui/material/styles';
 
-export const AntSwitch = styled(Switch)(({ theme }) => ({
+export const CustomSwitch = styled(Switch)(({ theme }) => ({
   width: 40,
   height: 24,
   padding: 0,
@@ -18,7 +18,7 @@ export const AntSwitch = styled(Switch)(({ theme }) => ({
     padding: 2,
     '&.Mui-checked': {
       transform: 'translateX(16px)',
-      color: '#fff',
+      color: 'var(--white-primary-color)',
       '& + .MuiSwitch-track': {
         opacity: 1,
         backgroundColor:
@@ -47,3 +47,4 @@ export const AntSwitch = styled(Switch)(({ theme }) => ({
     boxSizing: 'border-box',
   },
 }));
+export { Switch };

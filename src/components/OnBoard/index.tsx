@@ -1,17 +1,16 @@
 import { FC } from 'react';
-import CustomizedButtons from '@shared/Button';
-import cl from './OnBoard.module.scss';
-import slide2 from '@assets/swiper/slide2.svg';
-import '@styles/App.scss';
-import { MainTitle, RegularText } from '@shared/Typography';
 import { SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CustomSwiper } from './styled';
+import CustomButton from '@shared/Button';
+import { MainTitle, RegularText } from '@shared/Typography';
+import { ButtonTitles, SubTitles, Titles } from '@enums/enums';
+import slide2 from '@assets/swiper/slide2.svg';
+import cl from './OnBoard.module.scss';
 
 const OnBoard: FC = () => {
-  const buttonText = 'Next';
   return (
     <div className={cl.container}>
       <CustomSwiper
@@ -34,12 +33,10 @@ const OnBoard: FC = () => {
         </SwiperSlide>
       </CustomSwiper>
 
-      <MainTitle>First to know</MainTitle>
-      <RegularText className={cl.margins}>
-        All news in one place, be the first to know last news
-      </RegularText>
+      <MainTitle>{Titles.FirstToKnow} </MainTitle>
+      <RegularText className={cl.margins}>{SubTitles.FirstToKnow}</RegularText>
 
-      <CustomizedButtons text={buttonText} />
+      <CustomButton text={ButtonTitles.Next} />
     </div>
   );
 };

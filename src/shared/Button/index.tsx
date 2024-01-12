@@ -1,8 +1,12 @@
 import { FC } from 'react';
-import { CustomizedButtonsProps } from '@ts/interfaces';
+import { CustomButtonProps } from '@ts/interfaces';
 import { ColorButton } from './styled';
 
-const CustomizedButtons: FC<CustomizedButtonsProps> = ({ text }) => {
-  return <ColorButton variant="contained">{text}</ColorButton>;
+const CustomButton: FC<CustomButtonProps> = ({ text, onClick }) => {
+  return (
+    <ColorButton variant="contained" onClick={onClick}>
+      {text}
+    </ColorButton>
+  );
 };
-export default CustomizedButtons;
+export default CustomButton;

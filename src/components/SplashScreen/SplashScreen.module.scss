@@ -3,7 +3,7 @@
   @include flex;
   width: 100%;
   height: 100%;
-  background-color: var(--purple-primary-color);
+  background-color: var(--white-primary-color);
   font-size: 84px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -16,50 +16,10 @@
   }
   img {
     position: absolute;
-    left: 10%;
-    bottom: 38%;
+    left: 0;
+    right: 0;
+    top: 25%;
     animation: blink 2s infinite;
-    &:last-of-type {
-      animation-delay: 1s;
-      right: 10%;
-      top: 40%;
-      left: unset;
-      bottom: unset;
-    }
-  }
-}
-.text {
-  span {
-    animation: text 1s infinite;
-    @for $i from 1 through 6 {
-      &:nth-child(#{$i + 1}) {
-        animation-delay: #{$i * 0.3}s;
-      }
-    }
-  }
-  .red {
-    color: var(--letter-red-color);
-  }
-  .yellow {
-    color: var(--letter-yellow-color);
-  }
-  .aqua {
-    color: var(--letter-aqua-color);
-  }
-  .fuchsia {
-    color: var(--letter-fuchsia-color);
-  }
-  .tangerine {
-    color: var(--letter-tangerine-color);
-  }
-}
-@keyframes text {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(15px);
   }
 }
 
@@ -70,7 +30,7 @@
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(0 0 0.2rem #e37070);
+    filter: drop-shadow(0 0 0.2rem var(--purple-primary-color));
     transform: scale(1.1);
   }
 }
