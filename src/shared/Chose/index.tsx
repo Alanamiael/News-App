@@ -14,7 +14,7 @@ const ControlledCheckbox: FC<ControlledCheckboxProps> = ({
 
   return (
     <LanguageCheckbox onClick={handleChange} checked={checked}>
-      <RegularText widthNormal={false}>{title}</RegularText>
+      <RegularText bold>{title}</RegularText>
       {checked && (
         <CheckMark viewBox="0 0 24 24">
           <path d="M4.1 12.7L9 17.6 20.3 6.3" fill="none" />

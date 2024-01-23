@@ -1,8 +1,13 @@
 @import '@styles/mixins';
 .container {
   margin-top: 28px;
+
   .box {
     @include flex($direction: column, $gap: 16px);
     margin-top: 32px;
+  }
+  .signIn {
+    margin-top: 200px;
+    text-align: center;
   }
 }

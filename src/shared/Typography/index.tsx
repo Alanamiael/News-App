@@ -14,16 +14,22 @@ export const SubTitle = styled('h4')<SubTitleProps>(({ color }) => ({
   lineHeight: '28px',
   color: color || 'var(--black-primary-color)',
 }));
-export const RegularText = styled('p')<RegularTextProps>(({ widthNormal }) => ({
+export const RegularText = styled('p')<RegularTextProps>(({ bold }) => ({
   fontSize: '16px',
-  fontWeight: widthNormal ? 400 : 600,
+  fontWeight: bold ? 600 : 400,
   lineHeight: '24px',
   color: 'var(--grey-primary-color)',
 }));
+
 export const RegularBold = styled('p')<SubTitleProps>(({ color }) => ({
   display: 'inline',
   fontSize: '16px',
   fontWeight: 500,
   lineHeight: '32px',
-  color: color || 'var(--black-lighter-color)',
+  color:
+    color === 'black'
+      ? 'var(--black-primary-color)'
+      : color === 'gray'
+      ? 'var(--black-lighter-color)'
+      : 'black',
 }));

@@ -1,15 +1,12 @@
 import { FC } from 'react';
-import { SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { CustomSwiper } from '../Swiper/styled';
+import Swipper from '@components/Swiper';
 import CustomButton from '@shared/Button';
 import { MainTitle, RegularText } from '@shared/Typography';
 import { ButtonTitles, SubTitles, Titles } from '@enums/enums';
-import cl from './FirstToKnow.module.scss';
 import { FirstToKnowProps } from '@ts/interfaces';
-import Swipper from '@components/Swiper';
+import cl from './FirstToKnow.module.scss';
 
 const FirstToKnow: FC<FirstToKnowProps> = ({ onButtonClick }) => {
   return (
@@ -19,9 +16,7 @@ const FirstToKnow: FC<FirstToKnowProps> = ({ onButtonClick }) => {
       </div>
 
       <MainTitle>{Titles.FirstToKnow} </MainTitle>
-      <RegularText className={cl.margins} widthNormal={true}>
-        {SubTitles.FirstToKnow}
-      </RegularText>
+      <RegularText className={cl.margins}>{SubTitles.FirstToKnow}</RegularText>
 
       <CustomButton text={ButtonTitles.Next} onClick={onButtonClick} />
     </div>

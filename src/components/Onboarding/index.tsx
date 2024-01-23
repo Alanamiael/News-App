@@ -4,14 +4,13 @@ import GetStarted from '@components/GetStarted';
 
 const Onboarding = () => {
   const [showGetStarted, setShowGetStarted] = useState(false);
-  const handleButtonClick = () => {
+  const goNext = () => {
     setShowGetStarted(true);
   };
 
   return (
     <div>
-      {!showGetStarted && <FirstToKnow onButtonClick={handleButtonClick} />}
-      {showGetStarted && <GetStarted />}
+      {showGetStarted ? <GetStarted /> : <FirstToKnow onButtonClick={goNext} />}
     </div>
   );
 };

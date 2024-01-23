@@ -4,7 +4,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CustomSwiper } from './styled';
-import slide2 from '@assets/swiper/slide2.svg';
+import NYstreetImg from '@assets/swiper/NYstreetImg.svg';
 import cl from './Swipper.module.scss';
 
 const Swipper: FC = () => {
@@ -19,13 +19,13 @@ const Swipper: FC = () => {
       modules={[Pagination]}
     >
       <SwiperSlide className={cl.swiperSlide}>
-        <img src={slide2} alt="" />
+        <img src={NYstreetImg} alt="" />
       </SwiperSlide>
       <SwiperSlide className={cl.swiperSlide}>
-        <img src={slide2} alt="" />
+        <img src={NYstreetImg} alt="" />
       </SwiperSlide>
       <SwiperSlide className={cl.swiperSlide}>
-        <img src={slide2} alt="" />
+        <img src={NYstreetImg} alt="" />
       </SwiperSlide>
     </CustomSwiper>
   );

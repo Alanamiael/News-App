@@ -1,5 +1,10 @@
 import { Dispatch, SetStateAction } from 'react';
 
+export interface AuthButtonProps {
+  text: string;
+  onClick?: () => void;
+  startIcon: string;
+}
 export interface CustomButtonProps {
   text: string;
   onClick?: () => void;
@@ -28,7 +33,7 @@ export interface SubTitleProps {
 }
 
 export interface RegularTextProps {
-  widthNormal?: boolean;
+  bold?: boolean;
 }
 
 export interface FirstToKnowProps {

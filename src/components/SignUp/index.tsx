@@ -2,46 +2,32 @@ import { FC } from 'react';
 import { MainTitle, RegularBold, RegularText } from '@shared/Typography';
 import CustomButton from '@shared/Button';
 import CustomInput from '@shared/Input';
-import lock from '@assets/input/lock.svg';
-import mail from '@assets/input/mail.svg';
-import user from '@assets/input/user.svg';
-import {
-  AuthQuestions,
-  ButtonTitles,
-  Placeholders,
-  SubTitles,
-  Titles,
-} from '@enums/enums';
+import { AuthQuestions, ButtonTitles, SubTitles, Titles } from '@enums/enums';
 import cl from './SignUp.module.scss';
+import { inputFields } from './helpers';
 
 const SignUp: FC = () => {
   return (
     <div className={cl.container}>
       <MainTitle>{Titles.WelcometoStoryWire}</MainTitle>
-      <RegularText className={cl.textStyles} widthNormal={true}>
+      <RegularText className={cl.textStyles}>
         {SubTitles.WelcometoStoryWire}
       </RegularText>
       <div className={cl.box}>
-        <CustomInput text={Placeholders.Username} startInputIcon={user} />
-        <CustomInput text={Placeholders.EmailAdress} startInputIcon={mail} />
-        <CustomInput
-          text={Placeholders.Password}
-          type="password"
-          startInputIcon={lock}
-        />
-        <CustomInput
-          text={Placeholders.RepeatPassword}
-          type="password"
-          startInputIcon={lock}
-        />
-
+        {inputFields.map((field, index) => (
+          <CustomInput
+            key={index}
+            text={field.placeholder}
+            type={field.type || 'text'}
+            startInputIcon={field.startInputIcon}
+          />
+        ))}
         <CustomButton text={ButtonTitles.SignUp} />
       </div>
-
-      <RegularBold>{AuthQuestions.HaveAccount}</RegularBold>
-      <RegularBold color="var(--black-primary-color)">
-        {AuthQuestions.SignIn}
-      </RegularBold>
+      <div className={cl.signIn}>
+        <RegularBold color="gray">{AuthQuestions.HaveAccount}</RegularBold>
+        <RegularBold color="black">{AuthQuestions.SignIn}</RegularBold>
+      </div>
     </div>
   );
 };
