@@ -1,0 +1,57 @@
+export enum ButtonTitles {
+  GetStarted = 'Get Started',
+  Next = 'Next',
+  SignIn = 'Sign In',
+  SignUp = 'Sign Up',
+  Confirm = 'Confim',
+  Search = 'Search',
+  ChangePassword = 'ChangePassword',
+  SignInGoogle = 'Sign In with Google',
+  SignInFacebook = 'Sign In with Facebook',
+}
+export enum Placeholders {
+  EmailAdress = 'Email Adress',
+  Password = 'Password',
+  NewPassword = 'New Password',
+  RepeatPassword = 'Repeat Password',
+  RepeatNewPassword = 'Repeat New Password',
+  CurrentPassword = 'Current Password',
+  Username = 'Username',
+}
+export enum Titles {
+  FirstToKnow = 'First to know',
+  WelcomeBack = 'Welcome Back 👋',
+  ForgotPassword = 'Forgot Password 🤔',
+  CreateNewPassword = 'Create New Password 🔒',
+  WelcometoStoryWire = 'Welcome to StoryWire 👋',
+  SelectTopics = 'Select your favorite topics',
+  Browse = 'Browse',
+  Categories = 'Categories',
+  Bookmarks = 'Bookmarks',
+  Profile = 'Profile',
+  Language = 'Language',
+  ChangePassword = 'Change Password',
+  TermsConditions = 'Terms & Conditions',
+}
+export enum SubTitles {
+  FirstToKnow = 'All news in one place, be the first to know last news',
+  WelcomeBack = 'I am happy to see you again. You can continue where you left off by logging in',
+  ForgotPassword = 'We need your email adress so we can send you the password reset code.',
+  CreateNewPassword = 'You can create a new password, please dont forget it too.',
+  WelcometoStoryWire = 'Hello, I guess you are new around here. You can start using the application after sign up.',
+  SelectTopics = 'Select some of your favorite topics to let us suggest better news for you.',
+  Browse = 'Discover things of this world',
+  Categories = 'Thousands of articles in each category',
+  Bookmarks = 'Saved articles to the library',
+}
+export enum AuthQuestions {
+  DontHaveAcc = "Don't have an account? ",
+  SignUp = 'Sign Up',
+  ForgotPassword = 'Forgot Password? ',
+  RememberPassword = 'Remember the password? ',
+  TryAgain = 'Try again',
+  NotReceivEmail = 'Didn’t receive an email? ',
+  SendAgain = 'SendAgain',
+  HaveAccount = 'Already have an account? ',
+  SignIn = 'Sign In',
+}

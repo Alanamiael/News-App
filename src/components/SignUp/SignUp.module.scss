@@ -1,0 +1,15 @@
+@import '@styles/mixins';
+.container {
+  margin-top: 28px;
+  a:hover {
+    cursor: pointer;
+  }
+  .box {
+    @include flex($direction: column, $gap: 16px);
+    margin-top: 32px;
+  }
+  .signIn {
+    margin-top: 220px;
+    text-align: center;
+  }
+}
