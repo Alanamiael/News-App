@@ -1,0 +1,12 @@
+@import '@styles/mixins';
+
+.container {
+  @include flex($direction: column);
+  text-align: center;
+  margin-top: 50px;
+
+  .margins {
+    text-align: center;
+    margin: 24px 0 44px 0;
+  }
+}

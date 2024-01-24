@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+:root {
+  --black-primary-color: #333647;
+  --grey-primary-color: #7c82a1;
+  --purple-primary-color: #475ad7;
+  --purple-secondary-color: #644cdc;
+  --black-lighter-color: #555a77;
+  --gray-lighter-color: #f3f4f6;
+  --gray-darker-color: #666c8e;
+  --letter-coral-color: #e37070;
+  --letter-red-color: #ff4a4a;
+  --letter-yellow-color: #edc127;
+  --letter-tangerine-color: #fba017;
+  --letter-fuchsia-color: #e10fe5;
+  --letter-aqua-color: #25f2ff;
+  --white-primary-color: #fff;
+
+  /* Input */
+  --input-focus-border-color: var(--primary-color);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
