@@ -4,13 +4,13 @@ import styled from 'styled-components';
 export const StyledInput = styled(TextField)({
   width: '100%',
   '& .MuiInputBase-root': {
-    backgroundColor: '#F3F4F6',
+    backgroundColor: 'var(--white-primary-color)',
     borderRadius: '12px',
     transition: '0.4s',
     boxSizing: 'border-box',
 
     '& fieldset': {
-      borderColor: '#F3F4F6',
+      border: '1px solid var(--gray-secondary-color)',
       transition: '0.4s',
       boxSizing: 'border-box',
     },
@@ -40,3 +40,13 @@ export const StyledInput = styled(TextField)({
     },
   },
 });
+export const ErrorText = styled('div')(() => ({
+  marginTop: '5px',
+  padding: 0,
+  width: '100%',
+  fontSize: '12px',
+  fontWeight: 400,
+  lineHeight: '16px',
+  color: 'var(--error-red-color)',
+  textAlign: 'start',
+}));

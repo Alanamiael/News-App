@@ -1,8 +1,10 @@
-import React from 'react';
 import AuthLayout from './AuthLayout';
+import MainLayout from './MainLayout';
 
 const Navigator = () => {
-  return <AuthLayout />;
+  const isUserSignedIn = false;
+
+  return isUserSignedIn ? <MainLayout /> : <AuthLayout />;
 };
 
 export default Navigator;

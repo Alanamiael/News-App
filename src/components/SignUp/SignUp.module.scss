@@ -1,8 +1,8 @@
 @import '@styles/mixins';
 .container {
   margin-top: 28px;
-  a:hover {
-    cursor: pointer;
+  .noUnderline {
+    text-decoration: none;
   }
   .box {
     @include flex($direction: column, $gap: 16px);

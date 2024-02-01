@@ -1,6 +1,8 @@
 export enum ButtonTitles {
   GetStarted = 'Get Started',
   Next = 'Next',
+  NextStep = 'Next Step',
+  Skip = 'Skip',
   SignIn = 'Sign In',
   SignUp = 'Sign Up',
   Confirm = 'Confim',
@@ -24,6 +26,7 @@ export enum Titles {
   ForgotPassword = 'Forgot Password 🤔',
   CreateNewPassword = 'Create New Password 🔒',
   WelcometoStoryWire = 'Welcome to StoryWire 👋',
+  AddYourPhoto = 'Add your photo from gallery',
   SelectTopics = 'Select your favorite topics',
   Browse = 'Browse',
   Categories = 'Categories',

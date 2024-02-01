@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { routes } from './helpers';
 
-const Navigator = () => {
+const AuthLayout = () => {
   return (
     <Routes>
       {routes.map((route) => (
@@ -11,4 +11,4 @@ const Navigator = () => {
   );
 };
 
-export default Navigator;
+export default AuthLayout;

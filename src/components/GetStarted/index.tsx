@@ -1,10 +1,10 @@
 import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CustomButton from '@shared/Button';
 import { RegularText } from '@shared/Typography';
 import { ButtonTitles, SubTitles } from '@enums/enums';
 import handshake from '@assets/getStarted.svg';
 import cl from './GetStarted.module.scss';
-import { useNavigate } from 'react-router-dom';
 
 const GetStarted: FC = () => {
   const navigate = useNavigate();
