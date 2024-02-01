@@ -8,7 +8,8 @@ export const LanguageCheckbox = styled(Box)<LanguageCheckboxProps>(
     justifyContent: 'space-between',
     backgroundColor: checked
       ? 'var(--purple-primary-color)'
-      : 'var(--gray-lighter-color)',
+      : 'var(--white-primary-color)',
+    border: '1px, solid var(--purple-primary-color)',
     borderRadius: '12px',
     padding: '16px 24px',
     marginBottom: '16px',

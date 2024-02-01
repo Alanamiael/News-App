@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { RegularTextProps, SubTitleProps } from '@ts/interfaces';
+import { getColor } from './helpers';
 
 export const MainTitle = styled('h3')(() => ({
   fontSize: '24px',
@@ -21,17 +22,12 @@ export const RegularText = styled('p')<RegularTextProps>(({ bold }) => ({
   color: 'var(--grey-primary-color)',
 }));
 
-export const RegularBold = styled('p')<SubTitleProps>(({ color }) => ({
-  display: 'inline',
-  fontSize: '16px',
-  fontWeight: 500,
-  lineHeight: '32px',
-  color:
-    color === 'black'
-      ? 'var(--black-primary-color)'
-      : color === 'gray'
-      ? 'var(--black-lighter-color)'
-      : color === 'lightGray'
-      ? 'var( --grey-primary-color)'
-      : 'black',
-}));
+export const RegularBold = styled('p')<SubTitleProps>(({ color }) => {
+  return {
+    display: 'inline',
+    fontSize: '16px',
+    fontWeight: 500,
+    lineHeight: '32px',
+    color: getColor(color),
+  };
+});

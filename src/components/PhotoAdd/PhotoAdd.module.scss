@@ -1,0 +1,35 @@
+@import '@styles/mixins';
+.container {
+  @include flex($direction: column);
+  height: 100%;
+
+  img {
+    position: relative;
+    width: 250px;
+    border-radius: 50%;
+    border: none;
+  }
+  .plusIcon {
+    position: absolute;
+    right: 30%;
+
+    width: 45px;
+  }
+
+  .addPhotoTitle {
+    align-self: start;
+    margin: 28px 0 32px 0;
+  }
+  .buttonsContainer {
+    width: 100%;
+    text-align: center;
+    margin: 250px 0 12px 0;
+  }
+  .noUnderline {
+    text-decoration: none;
+
+    .skipTitle {
+      padding-bottom: 12px;
+    }
+  }
+}

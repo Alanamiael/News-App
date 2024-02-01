@@ -1,10 +1,6 @@
-import '@styles/App.scss';
-
-import Navigator from '@routes/index';
-import { BrowserRouter } from 'react-router-dom';
-import SplashScreen from '@components/SplashScreen';
 import { useState, useEffect } from 'react';
-
+import Navigator from '@routes/index';
+import SplashScreen from '@components/SplashScreen';
 import './styles/App.scss';
 
 const App = () => {
@@ -26,11 +22,9 @@ const App = () => {
     );
   }
   return (
-    <BrowserRouter>
-      <div className="wrapper">
-        <Navigator />
-      </div>
-    </BrowserRouter>
+    <div className="wrapper">
+      <Navigator />
+    </div>
   );
 };
 

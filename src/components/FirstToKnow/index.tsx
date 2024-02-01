@@ -9,11 +9,11 @@ import cl from './FirstToKnow.module.scss';
 const FirstToKnow: FC<FirstToKnowProps> = ({ onButtonClick }) => {
   return (
     <div className={cl.container}>
-      <div className={cl.container}>
-        <Swipper />
-      </div>
+      <Swipper />
 
-      <MainTitle>{Titles.FirstToKnow} </MainTitle>
+      <MainTitle className={cl.firstToKnowTitle}>
+        {Titles.FirstToKnow}{' '}
+      </MainTitle>
       <RegularText className={cl.margins}>{SubTitles.FirstToKnow}</RegularText>
 
       <CustomButton text={ButtonTitles.Next} onClick={onButtonClick} />

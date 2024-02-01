@@ -5,11 +5,12 @@
   --grey-primary-color: #7c82a1;
   --purple-primary-color: #475ad7;
   --purple-secondary-color: #644cdc;
+  --gray-secondary-color: #6c6f85;
   --black-lighter-color: #555a77;
   --gray-lighter-color: #f3f4f6;
   --gray-darker-color: #666c8e;
   --letter-coral-color: #e37070;
-  --letter-red-color: #ff4a4a;
+  --error-red-color: #ff453a;
   --letter-yellow-color: #edc127;
   --letter-tangerine-color: #fba017;
   --letter-fuchsia-color: #e10fe5;
@@ -25,14 +26,10 @@
 }
 
 body {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0px auto;
   font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 20px;
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
