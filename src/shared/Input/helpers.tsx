@@ -37,9 +37,9 @@ export const EndInputAdornment: FC<EndInputAdornmentProps> = ({
         edge="end"
       >
         {showPassword ? (
-          <img src={ClosedEye} alt="closed" />
+          <img src={OpenedEye} alt="closed" />
         ) : (
-          <img src={OpenedEye} alt="eye-opened" />
+          <img src={ClosedEye} alt="eye-opened" />
         )}
       </IconButton>
     </InputAdornment>

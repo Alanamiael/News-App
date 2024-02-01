@@ -21,17 +21,25 @@ export const RegularText = styled('p')<RegularTextProps>(({ bold }) => ({
   color: 'var(--grey-primary-color)',
 }));
 
-export const RegularBold = styled('p')<SubTitleProps>(({ color }) => ({
-  display: 'inline',
-  fontSize: '16px',
-  fontWeight: 500,
-  lineHeight: '32px',
-  color:
-    color === 'black'
-      ? 'var(--black-primary-color)'
-      : color === 'gray'
-      ? 'var(--black-lighter-color)'
-      : color === 'lightGray'
-      ? 'var( --grey-primary-color)'
-      : 'black',
-}));
+export const RegularBold = styled('p')<SubTitleProps>(({ color }) => {
+  const getColor = () => {
+    switch (color) {
+      case 'blue':
+        return 'var(--purple-primary-color)';
+      case 'gray':
+        return 'var(--black-lighter-color)';
+      case 'lightGray':
+        return 'var(--grey-primary-color)';
+      default:
+        return 'black';
+    }
+  };
+
+  return {
+    display: 'inline',
+    fontSize: '16px',
+    fontWeight: 500,
+    lineHeight: '32px',
+    color: getColor(),
+  };
+});

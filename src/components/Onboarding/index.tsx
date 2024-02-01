@@ -9,10 +9,10 @@ const Onboarding = () => {
     setShowGetStarted(true);
   };
 
-  return (
-    <div>
-      {showGetStarted ? <GetStarted /> : <FirstToKnow onButtonClick={goNext} />}
-    </div>
+  return showGetStarted ? (
+    <GetStarted />
+  ) : (
+    <FirstToKnow onButtonClick={goNext} />
   );
 };
 

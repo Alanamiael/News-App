@@ -1,15 +1,21 @@
-import { FC, useState, MouseEvent } from 'react';
+import { FC, useState, MouseEvent, useEffect } from 'react';
 import { CustomInputProps } from '@ts/interfaces';
 import { StartInputAdornment, EndInputAdornment } from './helpers';
-import { StyledInput } from './styled';
+import { ErrorText, StyledInput } from './styled';
 
 const CustomInput: FC<CustomInputProps> = ({
   placeholder,
   type,
   startInputIcon,
   endInputIcon,
+  onChange,
+  value,
+  onBlur,
+  error,
+  helperText,
+  name,
 }) => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(true);
 
   const handleTogglePasswordVisibility = (
     event: MouseEvent<HTMLButtonElement>
@@ -18,23 +24,39 @@ const CustomInput: FC<CustomInputProps> = ({
     setShowPassword((show) => !show);
   };
 
+  useEffect(() => {
+    if (type === 'password') {
+      setShowPassword(false);
+    }
+  }, [type]);
+
   return (
-    <StyledInput
-      placeholder={placeholder}
-      type={showPassword ? 'password' : 'text'}
-      fullWidth
-      InputProps={{
-        startAdornment: <StartInputAdornment startInputIcon={startInputIcon} />,
-        endAdornment: (
-          <EndInputAdornment
-            type={type}
-            endInputIcon={endInputIcon}
-            onToggle={handleTogglePasswordVisibility}
-            showPassword={showPassword}
-          />
-        ),
-      }}
-    />
+    <div style={{ width: '100%' }}>
+      <StyledInput
+        placeholder={placeholder}
+        onChange={onChange}
+        onBlur={onBlur}
+        value={value}
+        error={error}
+        name={name}
+        type={showPassword ? 'text' : 'password'}
+        fullWidth
+        InputProps={{
+          startAdornment: (
+            <StartInputAdornment startInputIcon={startInputIcon} />
+          ),
+          endAdornment: (
+            <EndInputAdornment
+              type={type}
+              endInputIcon={endInputIcon}
+              onToggle={handleTogglePasswordVisibility}
+              showPassword={showPassword}
+            />
+          ),
+        }}
+      />
+      {error && <ErrorText>{helperText}</ErrorText>}
+    </div>
   );
 };
 
