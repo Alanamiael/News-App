@@ -27,7 +27,12 @@
       "@helpers/*": ["helpers/*"],
       "@shared/*": ["shared/*"],
       "@enums/*": ["enums/*"],
-      "@routes/*": ["routes/*"]
+      "@routes/*": ["routes/*"],
+      "@config/*": ["config/*"],
+      "@services/*": ["services/*"],
+      "@pages/*": ["pages/*"],
+      "@redux/*": ["redux/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": [".eslintrc.cjs", "src"],

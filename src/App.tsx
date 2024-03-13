@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import SplashScreen from '@pages/Auth/SplashScreen';
 import Navigator from '@routes/index';
-import SplashScreen from '@components/SplashScreen';
+import { auth } from '@config/firebase';
+import { AuthRoutes } from '@enums/enums';
 import './styles/App.scss';
-
+const userData = JSON.parse(localStorage.getItem('user') || JSON.stringify(''));
 const App = () => {
+  const navigate = useNavigate();
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
@@ -11,13 +16,25 @@ const App = () => {
       setShowSplash(false);
     }, 3000);
 
-    return () => clearTimeout(timer);
+    const unsub = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        navigate(AuthRoutes.Onboarding);
+      }
+
+      if (user && !userData) {
+        localStorage.setItem('user', JSON.stringify(user));
+      }
+    });
+
+    return () => {
+      clearTimeout(timer), unsub;
+    };
   }, []);
 
   if (showSplash) {
     return (
       <div className="splashscreen_wrapper">
-        <SplashScreen />{' '}
+        <SplashScreen />
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { FC, useState, MouseEvent, useEffect } from 'react';
+import { FC, useState, MouseEvent, useEffect, forwardRef } from 'react';
 import { CustomInputProps } from '@ts/interfaces';
 import { StartInputAdornment, EndInputAdornment } from './helpers';
 import { ErrorText, StyledInput } from './styled';

@@ -1,13 +1,14 @@
-import { ChangeEvent, Dispatch, SetStateAction } from 'react';
+import { ChangeEvent, Dispatch, RefObject, SetStateAction } from 'react';
 
 export interface AuthButtonProps {
   text: string;
-  onClick?: () => void;
+  onClick?: () => Promise<void>;
   startIcon: string;
 }
 export interface CustomButtonProps {
   text: string;
   onClick?: () => void;
+  onSubmit?: () => void;
   type?: 'button' | 'submit' | 'reset' | undefined;
   disabled?: boolean;
 }
@@ -31,6 +32,7 @@ export interface CustomInputProps {
   error?: boolean;
   helperText?: string | boolean;
   name?: string;
+  ref?: RefObject<HTMLDivElement>;
 }
 export interface CustomAvatarProps {
   avatarImg: string;
@@ -64,9 +66,19 @@ export interface InputFieldProps {
 }
 
 export interface InitialValuesType {
-  name: string;
-  email: string;
-  password: string;
+  name?: string;
+  email?: string;
+  password?: string;
   repeatedPassword?: string;
   [key: string]: string | undefined;
+}
+
+export interface InitialState {
+  loading: boolean;
+  error: string;
+}
+
+export interface CategoriesListProps {
+  activeStates: string[];
+  handleImageClick: (name: string) => void;
 }
