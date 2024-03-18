@@ -1,6 +1,7 @@
 export enum ButtonTitles {
   GetStarted = 'Get Started',
   Next = 'Next',
+  Submit = 'Submit',
   NextStep = 'Next Step',
   Skip = 'Skip',
   SignIn = 'Sign In',
@@ -57,4 +58,15 @@ export enum AuthQuestions {
   SendAgain = 'SendAgain',
   HaveAccount = 'Already have an account? ',
   SignIn = 'Sign In',
+}
+export enum AuthRoutes {
+  Onboarding = '/',
+  SignIn = '/sign-in',
+  SignUp = '/sign-up',
+  ForgotPassword = '/forgot-password',
+  Categories = '/categories',
+  PhotoAdd = '/photo-add',
+}
+export enum MainRoutes {
+  Homepage = '/homepage',
 }

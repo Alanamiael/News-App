@@ -1,38 +1,39 @@
-import CategoriesAuth from '@components/CategoriesAuth';
-import CreateNewPassword from '@components/CreateNewPassword';
-import ForgotPassword from '@components/ForgotPassword';
-import Onboarding from '@components/Onboarding';
-import PhotoAdd from '@components/PhotoAdd';
-import SignIn from '@components/SignIn';
-import SignUp from '@components/SignUp';
+import SignIn from '@pages/Auth/SignIn';
+import ForgotPassword from '@pages/Auth/ForgotPassword';
+import Onboarding from '@pages/Auth/Onboarding';
+import PhotoAdd from '@pages/Auth/PhotoAdd';
+import SignUp from '@pages/Auth/SignUp';
+import Homepage from '@pages/Main/Homepage';
+import Categories from '@pages/Auth/Categories';
+import { AuthRoutes, MainRoutes } from '@enums/enums';
 
 export const routes = [
   {
     page: <Onboarding />,
-    path: '/',
+    path: AuthRoutes.Onboarding,
   },
   {
     page: <SignIn />,
-    path: '/sign-in',
+    path: AuthRoutes.SignIn,
   },
   {
     page: <SignUp />,
-    path: '/sign-up',
+    path: AuthRoutes.SignUp,
   },
   {
     page: <ForgotPassword />,
-    path: '/forgot-password',
+    path: AuthRoutes.ForgotPassword,
   },
   {
-    page: <CreateNewPassword />,
-    path: '/create-new-passwoerd',
-  },
-  {
-    page: <CategoriesAuth />,
-    path: '/categories-auth',
+    page: <Categories />,
+    path: AuthRoutes.Categories,
   },
   {
     page: <PhotoAdd />,
-    path: '/photo-add',
+    path: AuthRoutes.PhotoAdd,
+  },
+  {
+    page: <Homepage />,
+    path: MainRoutes.Homepage,
   },
 ];

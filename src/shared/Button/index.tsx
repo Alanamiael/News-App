@@ -5,6 +5,7 @@ import { ColorButton } from './styled';
 const CustomButton: FC<CustomButtonProps> = ({
   text,
   onClick,
+  onSubmit,
   type,
   disabled,
 }) => {
@@ -12,6 +13,7 @@ const CustomButton: FC<CustomButtonProps> = ({
     <ColorButton
       variant="contained"
       onClick={onClick}
+      onSubmit={onSubmit}
       type={type}
       disabled={disabled}
     >

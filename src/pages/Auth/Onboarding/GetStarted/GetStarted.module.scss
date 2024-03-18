@@ -1,0 +1,14 @@
+@import '@styles/mixins';
+
+.imgContainer {
+  margin-top: 150px;
+}
+.container {
+  @include flex($justify: flex-end, $direction: column);
+  margin-top: 150px;
+
+  .margins {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}

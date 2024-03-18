@@ -19,6 +19,11 @@ export const StyledInput = styled(TextField)({
       display: 'none',
     },
 
+    '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus, & input:-webkit-autofill:active':
+      {
+        backgroundColor: 'inherit !important',
+      },
+
     '&.Mui-focused': {
       background: '#fff',
 
@@ -33,6 +38,10 @@ export const StyledInput = styled(TextField)({
         },
       },
 
+      '& input': {
+        WebkitAutofill: '0 0 0px 1000px #fff inset',
+      },
+
       '& fieldset': {
         borderWidth: '1px',
         borderColor: '#475AD7',
@@ -40,6 +49,7 @@ export const StyledInput = styled(TextField)({
     },
   },
 });
+
 export const ErrorText = styled('div')(() => ({
   marginTop: '5px',
   padding: 0,

@@ -1,18 +1,21 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
+import { getStorage } from 'firebase/storage';
+import { getDatabase } from 'firebase/database';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-
 const firebaseConfig = {
   apiKey: API_KEY,
-  authDomain: 'fir-course-46797.firebaseapp.com',
-  projectId: 'fir-course-46797',
-  storageBucket: 'fir-course-46797.appspot.com',
-  messagingSenderId: '719096625064',
-  appId: '1:719096625064:web:208ac2b2e8b1d2714a4f9d',
-  measurementId: 'G-D79DH5LJ6Q',
+  authDomain: 'newsapp-4ee6a.firebaseapp.com',
+  databaseURL: 'https://newsapp-4ee6a-default-rtdb.firebaseio.com',
+  projectId: 'newsapp-4ee6a',
+  storageBucket: 'newsapp-4ee6a.appspot.com',
+  messagingSenderId: '906726492116',
+  appId: '1:906726492116:web:e1714f94311b2245aa3841',
+  measurementId: 'G-MQ5JKF9WC2',
 };
 
-const app = initializeApp(firebaseConfig);
-export const googleProvider = new GoogleAuthProvider();
+export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const storage = getStorage(app);
+export const database = getDatabase(app);

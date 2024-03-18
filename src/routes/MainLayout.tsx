@@ -1,5 +1,11 @@
+import Homepage from '@pages/Main/Homepage';
+
 const MainLayout = () => {
-  return <div>MainLayout</div>;
+  return (
+    <>
+      <Homepage />
+    </>
+  );
 };
 
 export default MainLayout;
